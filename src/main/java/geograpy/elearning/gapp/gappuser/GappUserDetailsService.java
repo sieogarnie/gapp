@@ -1,6 +1,6 @@
-package geograpy.elearning.gapp.service;
+package geograpy.elearning.gapp.gappuser;
 
-import geograpy.elearning.gapp.repository.GappUserRepository;
+import geograpy.elearning.gapp.gappuser.GappUserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

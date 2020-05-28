@@ -1,13 +1,11 @@
-package geograpy.elearning.gapp.model;
+package geograpy.elearning.gapp.gappuser;
 
+import geograpy.elearning.gapp.gappclass.GappClass;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -20,6 +18,10 @@ public class GappUser implements UserDetails {
     private String username;
     private String password;
     private String role;
+
+    @ManyToOne
+    private GappClass gappClass;
+
 
     public GappUser(String username, String password, String role) {
         this.username = username;
