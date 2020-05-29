@@ -37,7 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout().permitAll()
                 .and()
-                .csrf().disable();
+                .csrf().disable().cors().disable();
 
     }
 
