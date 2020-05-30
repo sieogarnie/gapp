@@ -24,7 +24,4 @@ public class GappAssignmentController {
         return gappAssignmentService.getAssignmentMark(id);
     }
 
-
-
-
 }
