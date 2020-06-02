@@ -39,4 +39,7 @@ public class GappUserService {
 
     }
 
+    GappUser saveUser(GappUser user) {
+        return gappUserRepository.save(user);
+    }
 }

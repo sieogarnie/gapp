@@ -2,9 +2,7 @@ package geograpy.elearning.gapp.gapptask;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +21,11 @@ public class GappTaskController {
     @GetMapping("/tasks/{id}")
     public Optional<GappTask> getTask(@PathVariable Long id){
         return gappTaskService.getTask(id);
+    }
+
+    @PostMapping("/tasks")
+    public GappTask addTask(@RequestBody GappTask task){
+        return gappTaskService.saveTask(task);
     }
 
 

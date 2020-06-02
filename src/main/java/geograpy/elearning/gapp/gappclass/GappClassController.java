@@ -3,9 +3,7 @@ package geograpy.elearning.gapp.gappclass;
 import geograpy.elearning.gapp.gappuser.GappUser;
 import geograpy.elearning.gapp.gappuser.GappUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +26,9 @@ public class GappClassController {
         return gappUserService.getUsersByClassId(id);
     }
 
+    @PostMapping("/classes")
+    public GappClass addClass(@RequestBody GappClass gappClass){
+        return gappClassService.saveClass(gappClass);
+    }
 
 }

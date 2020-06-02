@@ -19,4 +19,8 @@ public class GappTaskService {
     public List<GappTask> getAllTasks(){
         return gappTaskRepository.findAll();
     }
+
+    GappTask saveTask(GappTask task) {
+        return gappTaskRepository.save(task);
+    }
 }

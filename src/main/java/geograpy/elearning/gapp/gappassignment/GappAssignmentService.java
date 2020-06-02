@@ -60,4 +60,7 @@ public class GappAssignmentService {
             return gappAssignmentRepository.findAll();
     }
 
+    GappAssignment saveAssignment(GappAssignment assignment) {
+        return gappAssignmentRepository.save(assignment);
+    }
 }

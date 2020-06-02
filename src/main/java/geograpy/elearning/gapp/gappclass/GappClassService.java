@@ -14,4 +14,8 @@ public class GappClassService {
     List<GappClass> getAllClasses(){
         return gappClassRepository.findAll();
     }
+
+    GappClass saveClass(GappClass gappClass) {
+        return gappClassRepository.save(gappClass);
+    }
 }
